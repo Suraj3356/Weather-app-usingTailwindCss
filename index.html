@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-blue-100">
+    <h1 class="text-center text-2xl font-bold bg-blue-600 text-white py-4">Weather Forecast App</h1>
+    
+    <div class="flex flex-row  gap-12 p-12 ">
+      <div class="  w-full max-w-md mt-5 ">
+        <h3 class="text-lg font-bold mb-2">Enter City Name</h3>
+        <input
+          class="city-input w-full p-2 border rounded-md mb-3"
+          type="text"
+          placeholder="E.g., New York, London, Tokyo"
+        />
+        <button class="search-btn bg-blue-500 text-white w-full p-2 rounded-md mb-3">Search</button>
+        
+        <div class="text-center mb-3">or</div>
+        <button class="Location-btn bg-gray-600 text-white w-full p-2 rounded-md mb-5">Use Current Location</button>
+
+        <!-- Dropdown for Recently Searched Cities -->
+        <select id="recentCities" class="hidden w-full p-2 border rounded-md"></select>
+      </div>
+
+      <!-- Weather Data -->
+      <div class="weather-data w-full max-w-3xl">
+        <div class="current-weather bg-blue-600 text-white p-4 rounded-md mb-5"></div>
+        <div class="days-forecast">
+          <h2 class="text-xl font-bold mb-3">5-Day Forecast</h2>
+          <ul class="weather-cards grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4"></ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
